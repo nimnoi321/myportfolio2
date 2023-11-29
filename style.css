@@ -1,0 +1,689 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family: "poppins", sans-serif;
+    box-sizing: border-box;
+    color: lightpink;
+}
+
+/*#Particle{
+    overflow: hidden;
+}
+#particle canvas{
+    display: block;
+    position: fixed;
+    top: 0;
+    z-index: -1;
+
+}*/
+
+.bganimation{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(20, 1fr);
+    grid-template-rows: repeat(20,1fr);
+    filter:saturate(2);
+    overflow: hidden;
+}
+.colorbox{
+    z-index: 2;
+    filter: brightness(1.1);
+    transition: 2s ease;
+    margin: 2px;
+}
+.colorbox:hover{
+    background: lightpink;
+    transition-duration: 0s;
+}
+body {
+    background: #000000;
+    color: #ffffff;
+    cursor: none;
+}
+.header-text{
+    display: inline-block;
+}
+.header-text h1{
+    border-right: 5px solid;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: 
+       typing 6s infinite,
+       cursor .6s step-end infinite alternate;
+    filter: drop-shadow(0 0 20px white) ;
+    
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 9%;
+}
+
+#header {
+    width: 100%;
+    height: 100vh;
+    background-image: url(image/memo6.png);
+    background-size: cover;
+    background-position: left;
+
+}
+
+.container {
+    padding: 10px 10%
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 140px;
+    text-decoration: none;
+    font-size: larger;
+    font-weight: 800;
+}
+
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+    position: relative;
+}
+
+nav ul li a::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: white;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+
+nav ul li a:hover:after {
+    width: 100%;
+}
+
+.header-text {
+    margin-top: 20%;
+    font-size: 30px;
+}
+
+.header-text h1 {
+    font-size: 60px;
+    margin-top: 20px;
+    color: #ffffff;
+}
+.c20{
+    color: #000000;
+}
+.btn22 {
+    width: 60px;
+    height: 60px;
+    margin: 20px;
+    outline: none;
+    border: none;
+    background: rgb(214, 214, 214);
+    box-shadow: 4px 4px 10px #373535, -4px -4px 10px #373535;
+    border-radius: 50%;
+    transition: 0.2;
+    font-size: 30px;
+  }
+  .fa-instagram{
+    color:#c01f4a;
+   }
+   .fa-twitter{
+    color: #55acea;
+   }
+   .fa-youtube{
+    color: #CD201F;
+   }
+   .fa-facebook-f{
+    color: #3b5998;
+   }
+  
+  .btn22:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+  }
+  
+  .btn22:hover::before {
+    content: "";
+    position: absolute;
+    height: 80%;
+    width: 80%;
+    background: rgb(214, 214, 214);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .btn22:hover::before {
+    box-shadow: inset -7px -7px 20px 0 rgba(255, 255, 255, 1),
+      inset 7px 7px 20px 0 rgba(0, 0, 0, 0.3);
+  }
+  
+  .btn22:active {
+    box-shadow: inset 1px 1px 2px #babeec, inset -1px -1px 2px #fff;
+  }
+
+  .btn22 a{
+    position: absolute;
+    transform: translate(-50%, -50%);
+    transition: 0.2s;
+  }
+  
+  .btn22 a:hover {
+    font-size: 25px;
+  }
+  
+/*-----------------about-------------*/
+
+.cursor {
+    position: absolute;
+    height: 19px;
+    width: 19px;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    z-index: 5;
+  }
+  
+  .outer {
+    border: 1px solid white;
+    box-shadow: 0 0 0.1em 0.1em white;
+  }
+  
+  .inner {
+    background:#f7f7f770;
+    transition: 250ms ease-out;
+  }
+  
+  .cursor.hover {
+    transform: translate(-50%, -50%) scale(4);
+    transition: transform 250ms ease-in-out;
+    width: 25px;
+    height: 25px;
+  }
+  
+.head500{
+    transition: 2s;
+}
+.about {
+    width: 100%;
+    padding: 100px 0px;
+    background-color: #000000;
+}
+
+.about img {
+    height: auto;
+    width: 430px;
+}
+
+.about-text {
+    width: 550px;
+    
+}
+
+.main {
+    width: 1130px;
+    max-width: 95%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background: var(--img);
+}
+
+.container1 h1 {
+    font-size: 6rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+}
+.container1 h1:nth-child(1){
+    color: transparent;
+    -webkit-text-stroke: 2px #ffffff;
+    
+}
+.container1 h1:nth-child(2){
+    color: lightpink;
+    animation: wave 4s ease-in-out infinite;
+}
+
+.about-text p {
+    color: lightpink;
+    letter-spacing: 1px;
+    line-height: 28px;
+    font-size: 20px;
+    margin-bottom: 45px;
+}
+
+/*-----------------experience-------------*/
+.a{
+    position: relative;
+    display: inline-block;
+    padding: 0.25em 1em;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 600;
+    color: rgb(212, 3, 108);
+    background: white;
+    border: white 0.125em solid;
+    border-radius: 0.25em ;
+    cursor: pointer;
+
+    text-shadow: 
+    0 0 0.125em hsl(0 0% 100%/0.3),
+    0 0 0.45em currentColor;
+
+    box-shadow: inset 0 0 1em 0  white, 0 0 1em 0 white;
+    position: relative;
+
+
+}
+
+.a::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgb(212, 3, 108);
+    z-index: -1;
+    opacity: 0;
+    background-color: currentColor;
+    transition: opacity 100ms linear;
+}
+.a:hover,.a:focus{
+    background:white;
+    color: rgb(212, 3, 108);
+    border: white;
+    box-shadow: 0 0 0.5em 0.5em white;
+    text-shadow: none;
+}
+.a:hover::before,.a:focus::before{
+    opacity: 1;
+}
+.a:hover::after,.a:focus::after{
+    opacity: 1;
+}
+.main-text{
+    padding-top: 20px;
+    margin-top: 100px;
+}
+.p55{
+    color:white;
+    font-weight: 600;
+    font-size: 30px;
+    text-shadow: 0 0 0.5em 0 rgb(212, 3, 108);
+}
+
+.head {
+    font-size: 80px;
+    font-weight: 600;
+    text-align: center;
+    color: #ffffff;
+}
+.head2{
+    font-size: 30px;
+    font-weight: 300;
+    text-align: center;
+}
+.Experience-content {
+    width: 100%;
+    margin: 50px 0 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(50px, 5fr));
+    grid-gap: 20px;
+    padding: 10px;
+    flex: none;
+}
+
+.row {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.row img {
+    width: 100%;
+    display: block;
+    transition: trsnsform 0.5s;
+}
+
+.layer {
+    width: 100%;
+    height: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.1), lightpink);
+    position: absolute;
+    border-radius: 8px;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 40px;
+    transition: height 0.5s;
+}
+
+.layer h5 {
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.layer p {
+    color: rgb(255, 255, 255);
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+.layer i {
+    color: #c32323;
+    margin-top: 20px;
+    font-size: 20px;
+    background: lightpink;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.row:hover img {
+    transform: scale(1.1);
+}
+
+.row:hover .layer {
+    height: 100%
+}
+/*--------------------Skills----------------------*/
+
+.skills{
+    height: 100vh;
+    display: flex;
+    background: #000000;
+    align-items: center;
+    justify-content: center;
+    z-index: -1;
+
+}
+.skill-main{
+    position: relative;
+    max-width: 500px;
+    background-color: #000000;
+    margin: 0 15px;
+    padding: 10px 20px;
+}
+.skill-main{
+    width: 100%;
+}
+
+.skill-main{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(1,2fr);
+    grid-row-gap: 30px;
+    grid-column-gap: 50px;
+}
+.skill-bar{
+    margin-bottom: 2.5rem;
+}
+
+.skill-main h3{
+    margin-bottom: 2rem;
+    font-size: 60px;
+    font-weight: 600;
+    text-align: center;
+    color: #ffffff;
+    position: relative;
+}
+.skill-left .skill-bar .info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10 px;
+}
+.info{
+    font-size: 30px;
+    font-weight: 400;
+    color: #ffffff;
+}
+
+.skill-left .skill-bar .bar{
+    width: 100%;
+    height: 10px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 25px;
+    margin: 25px 0;
+    position: relative;
+}
+
+.skill-bar .bar span{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    background: lightpink;
+    border-radius: 25px;
+    box-shadow: var(--neon-box-shadow);
+}
+
+.skill-bar .bar .html{
+    width: 70%;
+    animation: html 2s;
+}
+
+.skill-bar .bar .css{
+    width: 50%;
+    animation: css 2s;
+}
+
+.skill-bar.bar .javascript{
+    width: 45%;
+    animation: javascript 2s;
+}
+
+.skill-bar.bar .python{
+    width: 30%;
+    animation: python 2s;
+}
+/*----------------------contact------------------------------*/
+.section{
+    flex-direction: column;
+}
+#status{
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+
+}
+#status.success{
+     background-color: lightgreen;
+     color: #000000;
+}
+#status.error{
+    background-color: rgb(250, 129, 92);
+    color: white;
+    animation: status 4s ease forwards;
+}
+.contact{
+    display: flex;
+    background: #000000;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    margin: 0 auto;
+    border-radius: 8px;
+}
+
+.head200{
+    font-size: 80px;
+    font-weight: 600;
+    color: white;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.contact-form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 4.2rem;
+}
+.contact-form form{
+    position: relative;
+    width: 550px;
+}
+form input,
+form textarea{
+    width: 100%;
+    padding: 20px;
+    border: none;
+    background: transparent;
+    color:white;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    font-size: 20px;
+    box-shadow: inset 0 0 0.2em 0.2em lightpink, 0 0 0.2em 0.2em lightpink;
+}
+form input::placeholder,
+form textarea::placeholder{
+    color: var--2nd-main-color;
+}
+.form .send-btn{
+    box-shadow: 4px 4px white;
+    padding: 0 25px;
+    line-height: 42px;
+    display: inline-block;
+    border: 1 px solid transparent;
+    font-size: 30px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    transition: ease all 0.35s;
+    cursor: pointer;
+}
+form .send-btn:hover{
+    background: lightpink;
+    color: black;
+    box-shadow: 4px 4px rgb(253, 253, 253);
+    box-shadow: 0 0 0.2em 0.2em lightpink;
+}
+
+
+/*-------------------------keyframes------------------*/
+@keyframes status{
+    0%{
+        opacity: 1;
+        pointer-events: all;
+    }
+    90%{
+        opacity: 1;
+        pointer-events: all;
+    }
+    100%{
+        opacity: 0;
+        pointer-events: none;
+    }
+}
+@keyframes animate 
+{
+    0%
+    {
+        filter: drop-shadow(0 0 5px #0f0) drop-shadow(0 0 15px #0f0) drop-shadow(0 0 30px #0f0) hue-rotate(0deg); 
+    }
+    100%
+    {
+        filter: drop-shadow(0 0 5px #0f0) drop-shadow(0 0 15px #0f0) drop-shadow(0 0 30px #0f0) hue-rotate(360deg); 
+    }
+
+    
+}
+@keyframes wave
+{
+    0%,100%
+    {
+        clip-path: polygon(0% 46%, 13% 51%, 23% 56%, 32% 62%, 43% 64%, 50% 67%, 65% 68%, 70% 67%, 78% 64%, 85% 60%, 92% 54%, 97% 48%, 100% 43%, 100% 99%, 0% 100%);
+    }
+    50%
+    {
+        clip-path: polygon(0% 59%, 10% 65%, 21% 68%, 32% 70%, 44% 68%, 52% 63%, 63% 56%, 68% 52%, 73% 48%, 88% 41%, 100% 37%, 100% 99%, 0% 100%);
+    }
+}
+@keyframes cursor{
+    50% { border-color: transparent;}
+}
+@keyframes typing{
+    from { width: 0 }
+}
+@keyframes animate
+{
+    0%,10%,100%
+    {
+        width: 0;
+    }
+    70%,90%
+    {
+        width: 100%;
+    }
+}
+
+@keyframes html{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 70%;
+    }
+}
+
+@keyframes css{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 50%;
+    }
+}
+@keyframes javascript{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 45%;
+    }
+}
+@keyframes python{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 30%;
+    }
+}
+
+
+
